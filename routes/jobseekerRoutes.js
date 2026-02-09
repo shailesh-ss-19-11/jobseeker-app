@@ -1,5 +1,4 @@
 const jobseekerRoutes = require("express").Router();
-jobseekerRoutes.post("/create-job");
 
 
 // 18-01-2026

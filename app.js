@@ -2,6 +2,7 @@ const express = require("express");
 const connectDb = require("./config/connectDB");
 const { rolesRoutes } = require("./routes/rolesRoute");
 const authRoutes = require("./routes/authRoutes");
+const employerRoutes  = require("./routes/employerRoutes");
 const { port } = require("./config/constant");
 const app = express();
 const dotenv = require("dotenv").config();
@@ -16,6 +17,7 @@ app.get("/health-check", (req, res) => {
 
 app.use("/app",rolesRoutes);
 app.use("/auth",authRoutes);
+app.use("/employer",employerRoutes);
 
 app.listen(port || 3000, () => console.log("listening on port " + port || 3000));
 
