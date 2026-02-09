@@ -4,8 +4,6 @@ const signupJobSeeker = async (req, res) => {
     try {
         // add service 
         const result = await authService.signupJobSeeker(req.body);
-        delete result.password;
-        console.log(result)
         res.status(201).json({ message: "signup success", result })
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -30,7 +28,7 @@ const signupEmployer = async (req, res) => {
         const result = await authService.signupEmployer(req.body);
         res.status(201).json({ message: "signup success", user: result })
     } catch (error) {
-        res.status(500).json({ message: "signup failed", user: {} })
+        res.status(500).json({ message: error.message })
     }
 }
 
