@@ -5,9 +5,12 @@ const authRoutes = require("./routes/authRoutes");
 const employerRoutes  = require("./routes/employerRoutes");
 const { port } = require("./config/constant");
 const app = express();
+const cors = require("cors");
+
 const dotenv = require("dotenv").config();
 connectDb();
 app.use(express.json());
+app.use(cors())
 
 console.log(port);
 

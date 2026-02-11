@@ -9,7 +9,6 @@ const jobPostModel = new mongoose.Schema({
     skill:{ type: String, required: true },
     package:{ type: String },
     skillsMustHave:{ type: String, required: true },
-    industry:{ type: String, required: true },
     employmentType:{ type: String, required: true },
     education:{ type: String, required: true },
 })

@@ -5,19 +5,19 @@ const createJob = async (body) => {
         throw new Error("body is required");
     }
 
-    const createdJob = JobPostModel.create(body);
+    const createdJob = await JobPostModel.create(body);
     return createdJob;
 }
 
-const updateJob = async => {
+const updateJob = async(body) => {
 
 }
 
-const deleteJob = async => {
+const deleteJob = async(body) => {
 
 }
 
-const getJobById = async => {
+const getJobById = async(body) => {
 
 }
 
