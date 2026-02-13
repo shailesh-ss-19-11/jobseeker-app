@@ -1,23 +1,24 @@
 const JobPostModel = require("../models/JobPostModel");
 
-const createJob = async (body) => {
+const createJob = async (body, employerId) => {
     if (!body) {
         throw new Error("body is required");
     }
 
-    const createdJob = await JobPostModel.create(body);
+    const newObj = { ...body, employerId };
+    const createdJob = await JobPostModel.create(newObj);
     return createdJob;
 }
 
-const updateJob = async(body) => {
+const updateJob = async (body) => {
 
 }
 
-const deleteJob = async(body) => {
+const deleteJob = async (body) => {
 
 }
 
-const getJobById = async(body) => {
+const getJobById = async (body) => {
 
 }
 

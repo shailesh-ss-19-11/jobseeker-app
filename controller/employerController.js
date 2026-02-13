@@ -1,7 +1,7 @@
 const employerService = require("./../services/employerService");
 const createJob = async (req, res) => {
     try {
-        const result =await employerService.createJob(req.body);
+        const result =await employerService.createJob(req.body,req.employerId);
         res.status(201).json({ result });
     } catch (error) {
         res.status(500).json({ error: error.message });

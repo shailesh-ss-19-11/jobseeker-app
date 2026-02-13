@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const roles = require("./RolesModel");
+const RolesModel = require("./RolesModel");
 
 const employeeSignupModel = mongoose.Schema({
     name: { type: String, required: true },
