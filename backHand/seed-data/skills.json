@@ -1,0 +1,240 @@
+[
+    {
+        "skills": "JavaScript"
+    },
+    {
+        "skills": "Python"
+    },
+    {
+        "skills": "Java"
+    },
+    {
+        "skills": "C#"
+    },
+    {
+        "skills": "PHP"
+    },
+    {
+        "skills": "C++"
+    },
+    {
+        "skills": "TypeScript"
+    },
+    {
+        "skills": "Ruby"
+    },
+    {
+        "skills": "Swift"
+    },
+    {
+        "skills": "Go"
+    },
+    {
+        "skills": "Kotlin"
+    },
+    {
+        "skills": "Rust"
+    },
+    {
+        "skills": "Scala"
+    },
+    {
+        "skills": "Dart"
+    },
+    {
+        "skills": "Objective-C"
+    },
+    {
+        "skills": "Perl"
+    },
+    {
+        "skills": "Lua"
+    },
+    {
+        "skills": "Haskell"
+    },
+    {
+        "skills": "Clojure"
+    },
+    {
+        "skills": "Elixir"
+    },
+    {
+        "skills": "Erlang"
+    },
+    {
+        "skills": "F#"
+    },
+    {
+        "skills": "R"
+    },
+    {
+        "skills": "MATLAB"
+    },
+    {
+        "skills": "SQL"
+    },
+    {
+        "skills": "NoSQL"
+    },
+    {
+        "skills": "GraphQL"
+    },
+    {
+        "skills": "RESTful APIs"
+    },
+    {
+        "skills": "Docker"
+    },
+    {
+        "skills": "Kubernetes"
+    },
+    {
+        "skills": "AWS"
+    },
+    {
+        "skills": "Azure"
+    },
+    {
+        "skills": "Google Cloud Platform"
+    },
+    {        "skills": "DevOps"
+    },
+    {        "skills": "Machine Learning"
+    },
+    {        "skills": "Data Science"
+    },
+    {        "skills": "Artificial Intelligence"
+    },
+    {        "skills": "Cybersecurity"
+    },
+    {        "skills": "Blockchain"
+    },
+    {        "skills": "Internet of Things (IoT)"
+    },
+    {        "skills": "Mobile Development"
+    },
+    {        "skills": "Web Development"
+    },
+    {        "skills": "Game Development"
+    },
+    {        "skills": "Cloud Computing"
+    },
+    {        "skills": "Big Data"
+    },
+    {        "skills": "Virtual Reality (VR)"
+    },
+    {        "skills": "Augmented Reality (AR)"
+    },
+    {        "skills": "Quantum Computing"
+    },
+    {        "skills": "Natural Language Processing (NLP)"
+    },
+    {        "skills": "Computer Vision"
+    },
+    {        "skills": "Robotics"
+    },
+    {        "skills": "Edge Computing"
+    },
+    {        "skills": "Microservices"
+    },
+    {        "skills": "Serverless Architecture"
+    },
+    {        "skills": "Agile Methodologies"
+    },
+    {        "skills": "Scrum"
+    },
+    {        "skills": "Kanban"
+    },
+    {        "skills": "Project Management"
+    },
+    {        "skills": "Version Control (Git)"
+    },
+    {        "skills": "React.js"
+    },
+    {        "skills": "Angular"
+    },
+    {        "skills": "Vue.js"
+    },
+    {        "skills": "Node.js"    
+    },
+    {        "skills": "Express.js"
+    },
+    {        "skills": "Django"
+    },
+    {        "skills": "Flask"
+    },
+    {        "skills": "Ruby on Rails"
+    },
+    {        "skills": "Spring Boot"
+    },
+    {        "skills": "ASP.NET"
+    },
+    {        "skills": "Laravel"
+    },
+    {        "skills": "Symfony"
+    },
+    {        "skills": "CodeIgniter"
+    },
+    {        "skills": "Zend Framework"
+    },
+    {        "skills": "CakePHP"
+    },
+    {        "skills": "Hooks"  
+    },
+    {        "skills": "Redux"
+    },
+    {        "skills": "MobX"
+    },
+    {        "skills": "GraphQL"
+    },
+    {        "skills": "Apollo Client"
+    },
+    {        "skills": "Relay"
+    },
+    {        "skills": "RxJS"
+    },
+    {        "skills": "Next.js"
+    },
+    {        "skills": "Nuxt.js"
+    },
+    {        "skills": "Gatsby"
+    },
+    {        "skills": "Svelte"
+    },
+    {        "skills": "Ember.js"
+    },
+    {        "skills": "Backbone.js"
+    },
+    {        "skills": "Meteor.js"
+    },
+    {        "skills": "Express.js"
+    },
+    {        "skills": "Koa.js"
+    },
+    {        "skills": "Hapi.js"
+    },
+    {        "skills": "Sails.js"
+    },
+    {        "skills": "Feathers.js"
+    },
+    {        "skills": "LoopBack"
+    },
+    {        "skills": "AdonisJS"
+    },
+    {        "skills": "NestJS"
+    },
+    {        "skills": "Fastify"
+    },
+    {        "skills": "Total.js"
+    },
+    {        "skills": "Moleculer"
+    },
+    {        "skills": "Micro"
+    },
+    {        "skills": "Seneca"
+    },
+    {        "skills": "Traefik"
+    }
+]
+
