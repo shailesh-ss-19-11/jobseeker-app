@@ -1,12 +1,14 @@
 import axios from "axios";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { baseURL } from "../../../../constant";
-
+import { getdata } from "../../../../service/Api";
+import Select from "react-select";
 const JobSeekerSignup = () => {
   const params = useParams();
   const navigate = useNavigate();
+  const [skills, setSkills] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     age: "",
@@ -17,15 +19,37 @@ const JobSeekerSignup = () => {
     address: "",
     location: "",
     gender: "",
-    skills: "",
+    skills: [],
     education: "",
     password: "",
     confirmPassword: "",
     role: "JOB_SEEKER_ROLE_ID",
   });
 
+  const getSkills = () => {
+    getdata("app/v1/skills", (success) => {
+      const skillsArray = success.data.map((skill) => {
+        return { value: skill.skills, label: skill.skills }
+      })
+      setSkills(skillsArray);
+    }, (error) => {
+      console.log(error)
+    })
+  }
 
-  const handleChange = (e) => {
+  useEffect(() => {
+    getSkills();
+  }, [])
+
+
+  const handleChange = (e,name) => {
+
+    if(name==="skills"){
+      const selectedSkills = e.map((skill) => skill.value);
+      setFormData({ ...formData, skills: selectedSkills });
+      return;
+    }
+    
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleSubmit = async (e) => {
@@ -118,8 +142,18 @@ const JobSeekerSignup = () => {
                 </select>
               </div>
             </div>
+            <Select
+              closeMenuOnSelect={false}
+              defaultValue={null}
+              isMulti
+              options={skills}
+              onChange={(e)=>handleChange(e,"skills")}
+              name="skills"
+              // styles={colourStyles}
+            />
 
-            <Input label="Skills *" name="skills" placeholder="React, Node, MongoDB" onChange={handleChange} />
+            {/* <Input label="Skills *" name="skills" placeholder="React, Node, MongoDB" onChange={handleChange} /> */}
+
             <Input label="Education *" name="education" onChange={handleChange} />
             <Input label="Address *" name="address" onChange={handleChange} />
 
@@ -141,18 +175,18 @@ const JobSeekerSignup = () => {
               Create Job Seeker Account
             </motion.button>
           </div>
-            </form>
+        </form>
 
-          {/* Footer */}
-          <p className="mt-8 text-center text-sm text-gray-500">
-            Already have an account?{" "}
-            <Link
-              to="/auth/jobseeker/login"
-              className="font-semibold bg-gradient-to-r from-indigo-500 to-sky-500 bg-clip-text text-transparent hover:opacity-80 transition"
-            >
-              Login
-            </Link>
-          </p>
+        {/* Footer */}
+        <p className="mt-8 text-center text-sm text-gray-500">
+          Already have an account?{" "}
+          <Link
+            to="/auth/jobseeker/login"
+            className="font-semibold bg-gradient-to-r from-indigo-500 to-sky-500 bg-clip-text text-transparent hover:opacity-80 transition"
+          >
+            Login
+          </Link>
+        </p>
       </motion.div>
     </div >
   );

@@ -2,9 +2,9 @@
 import axios from "axios";
 import { baseURL } from "../constant";
 
-const getdata= async(success, error)=>{
+const getdata= async(url,success, error)=>{
    try {
-       const response=await axios.get(baseURL+"app/v1/roles")
+       const response=await axios.get(baseURL+url)
     if(response.status===200){
         success(response)
     }

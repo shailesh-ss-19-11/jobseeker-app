@@ -8,7 +8,7 @@ const MyAccount = () => {
   const [roles, setRoles] = useState([]);
 
   const fetchRoles = () => {
-    getdata(
+    getdata("app/v1/roles",
       (result) => {
         setRoles(result?.data);
       },
@@ -18,6 +18,7 @@ const MyAccount = () => {
       }
     );
   };
+
 
   useEffect(() => {
     fetchRoles();
