@@ -1,42 +1,14 @@
-const jobseekerSignUpModel = require("../models/jobseekerSignUpModel");
+const  JobseekerService= require("../services/jobseekerServices");
 
-
-
-const createJobseeker = async (body, jobseekerId) => {
-    if (!body) {
-        throw new Error("body is required");
+const fetchJobs = async (req, res) => {
+    try {
+        const result = await JobseekerService.fetchJobs(req.body);
+        res.status(200).json({ result });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
     }
-
-    const newObj = { ...body, jobseekerId };
-    const createdJob = await jobseekerSignUpModel.create(newObj);
-    return createdJob;
-}
-
-const updateJobseeker = async (body) => {
-     if (!body) {
-        throw new Error("body is required");
-    }
-    const { jobseekerId, ...updateData } = body;
-    const updatedJobseeker = await jobseekerSignUpModel.findOneAndUpdate(
-        { jobseekerId },
-        updateData,
-        { new: true }
-    );
-    return updatedJobseeker;
-
-}
-
-const deleteJobseeker = async (body) => {
-
-}
-
-const getJobByIdseeker = async (body) => {
-
 }
 
 module.exports = {
-    createJobseeker,
-    updateJobseeker,
-    deleteJobseeker,
-    getJobByIdseeker
+    fetchJobs
 }

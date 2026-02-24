@@ -44,11 +44,21 @@ const getCandidates = async(req,res) => {
         res.status(500).json({ error: error.message });
     }
 }
+const fetchEmployerJobPosts = async(req,res) => {
+    const employerId = req.employerId;
+    try {
+        const result =await employerService.fetchEmployerJobPosts(employerId);
+        res.status(200).json({ result });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
 
 module.exports = {
     createJob,
     updateJob,
     deleteJob,
     getJobById,
-    getCandidates
+    getCandidates,
+    fetchEmployerJobPosts
 }

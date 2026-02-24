@@ -39,11 +39,22 @@ const getCandidates = async (body) => {
   }
 };
 
+const fetchEmployerJobPosts= async (employerId) => {
+    try {
+        const jobPosts = await jobPostModel.find({ employerId });
+        return jobPosts;
+    } catch (error) {
+        throw error;
+    }
+}
+
+
 
 module.exports = {
     createJob,
     updateJob,
     deleteJob,
     getJobById,
-    getCandidates
+    getCandidates,
+    fetchEmployerJobPosts
 }
