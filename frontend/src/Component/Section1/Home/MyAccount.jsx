@@ -26,12 +26,12 @@ const MyAccount = () => {
 
   return (
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden
-    bg-gradient-to-br from-indigo-50 via-white to-sky-50 px-4">
+    bg-linear-to-br from-indigo-50 via-white to-sky-50 px-4">
 
       {/* Animated Gradient Blobs */}
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-indigo-400/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-sky-400/30 rounded-full blur-3xl animate-pulse delay-300" />
-      <div className="absolute -bottom-40 left-1/3 w-[500px] h-[500px] bg-emerald-400/30 rounded-full blur-3xl animate-pulse delay-700" />
+      <div className="absolute -top-40 -left-40 w-125 h-125 bg-indigo-400/30 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-1/3 -right-40 w-125 h-125 bg-sky-400/30 rounded-full blur-3xl animate-pulse delay-300" />
+      <div className="absolute -bottom-40 left-1/3 w-125 h-125 bg-emerald-400/30 rounded-full blur-3xl animate-pulse delay-700" />
 
       {/* Glass Card */}
       <motion.div
@@ -48,7 +48,7 @@ const MyAccount = () => {
           <button
             onClick={() => setActiveTab("login")}
             className={`w-1/2 py-4 font-semibold transition ${activeTab === "login"
-                ? "bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-white"
+                ? "bg-linear-to-r from-indigo-500 via-sky-500 to-emerald-500 text-white"
                 : "text-gray-600 hover:text-indigo-600"
               }`}
           >
@@ -58,7 +58,7 @@ const MyAccount = () => {
           <button
             onClick={() => setActiveTab("signup")}
             className={`w-1/2 py-4 font-semibold transition ${activeTab === "signup"
-                ? "bg-gradient-to-r from-emerald-500 via-sky-500 to-indigo-500 text-white"
+                ? "bg-linear-to-r from-emerald-500 via-sky-500 to-indigo-500 text-white"
                 : "text-gray-600 hover:text-emerald-600"
               }`}
           >
