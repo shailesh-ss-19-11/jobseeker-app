@@ -1,4 +1,4 @@
-const jobPostModel = require("../models/JobPostModel");
+
 const jobseekerSignUpModel = require("../models/jobseekerSignUpModel");
 
 
@@ -47,6 +47,8 @@ const fetchEmployerJobPosts= async (employerId) => {
         throw error;
     }
 }
+
+
 
 
 

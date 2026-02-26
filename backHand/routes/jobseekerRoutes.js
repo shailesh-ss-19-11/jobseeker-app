@@ -1,9 +1,10 @@
-const { fetchJobs } = require("../controller/JobseekerControllar");
-const authEmployerMiddleWare = require("../middleware/authEmployeeMiddleWare");
+const { fetchJobs, applyJob } = require("../controller/JobseekerControllar");
+const authJobSeekerMiddleWare = require("../middleware/authJobSeekerMiddleWare");
 
-console.log("hello")
 const JobseekerRoutes = require("express").Router();
 
-JobseekerRoutes.post("/fetch-jobs", fetchJobs);
+JobseekerRoutes.post("/fetch-jobs",authJobSeekerMiddleWare, fetchJobs);
+JobseekerRoutes.post("/apply-job", authJobSeekerMiddleWare, applyJob);
 
 module.exports = JobseekerRoutes
+

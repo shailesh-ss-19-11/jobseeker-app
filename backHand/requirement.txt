@@ -1,7 +1,7 @@
 Job Portal Application – Functional Features
 👨‍💻 Job Seeker Features
-Authentication & Profile
-Register and login
+Authentication & Profile.  //done
+Register and login ///done
 
 <!-- register fields  -->
 name, email, phone, gender, location, password, current salary, expected salary
@@ -14,38 +14,21 @@ Create and update profile
 Upload / update resume (stored locally for now)
 Add skills, experience, education
 Manage contact details
-Job Discovery
-View all active job posts
-Search jobs by keyword, title, or company
+Job Discovery.        // pending
+View all active job posts //pending
+Search jobs by skills //done
 Filter jobs by:
-Location (city/state/remote)
-Job type
-Experience level
-Salary range
-Skills
-Posted date
-Sort jobs (latest, salary, relevance)
-Job Applications
-Apply for jobs
-Upload resume and cover letter
-Withdraw application before closure
-Prevent duplicate applications
-View all applied jobs
-Track application status:
-Applied
-Shortlisted
-Rejected
-Hired
-Notifications
+Location (city/state/remote) //pending
 
-Email notification on:
-Application submission
-Status change
-Job closure (optional)
-Saved & History
-Save/bookmark jobs
-View recently viewed jobs
-Application history
+Skills //done
+Apply for jobs. //pending
+View all applied jobs //pending
+Track application status: hold
+Applied. //pending
+Shortlisted //pending
+Rejected //pending
+Hired //pending
+Notifications //pending
 
 👔 Employer Features
 Authentication & Company Profile
@@ -109,3 +92,26 @@ Hiring progress
 /v1/employer/open-candidate-info
 /v1/employer/search-jobseeker
 /v1/employer/filter-jobseeker
+
+
+apply // jobseeker
+
+jobApplicationApplied
+jobPostId
+
+
+applied jobs ---> jobseeker
+
+
+
+jobseekers applied jobs ----> for employer
+when open by employer status ---> under_review 
+shortlist ----- reject buttons
+if shortlist status---> accepted
+if not shortlist status---> rejected
+
+
+
+
+
+
